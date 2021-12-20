@@ -1,0 +1,148 @@
+:root {
+    --background: rgb(27, 27, 27);
+    --lightgray: rgb(70, 69, 69);
+    --orange: rgb(245, 71, 3);
+    --darkwhite: rgb(221, 221, 221);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html{
+    background-color: var(--background);
+}
+
+body{
+    display: grid;
+    grid-template-columns: 10vw 65vw 25vw;
+    grid-template-rows: 10vh 15vh 15vh 25vh 25vh 10vh;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+
+    font-family: Helvetica, sans-serif;
+}
+
+/* Background Pepe */
+
+.img-wrapper{
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translate(50%,-50%);
+    height: 70vh;
+    z-index: -10;
+}
+
+.img-wrapper img{
+    height: 50vw;
+    max-height: 100%;
+}
+
+/* Content explainer */
+
+h1{
+    color: var(--orange);
+}
+
+a{
+    color: var(--orange);
+    font-variant: small-caps;
+    text-transform: none;
+    letter-spacing: 8px;
+    color: rgba(255, 255, 255, 1);
+}   
+
+a:hover{
+    color: red;
+}
+
+a:active{
+    color: darkred;
+}
+
+h1.top-line{
+    font-size: calc(5vw + 12px);
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    justify-self: start;
+    align-self: end;
+}
+
+h1.bottom-line{
+    font-size: calc(6vw + 18px);
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    justify-self: start;
+    align-self: start;
+}
+
+span{
+    font: calc(1vw + 12px);
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+    justify-self: start;
+    align-self: center;
+
+    color: var(--darkwhite);
+    background-color: rgba(27, 27, 27, 0.75);
+}
+
+button{
+    grid-column: 2 / 3;
+    grid-row: 5 / 6;
+    justify-self: center;
+    align-self: center;
+
+    height: 90%;
+}
+
+.block {
+    position: relative;
+    background-color: var(--background);
+    color: var(--orange);
+    padding: 3vh;
+    font-size: 3rem;
+}
+
+.block:before, .block:after {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
+    #0000ff, #00ff00,#ffff00, #ff0000);
+    background-size: 400%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -1;
+    animation: steam 20s linear infinite;
+}
+
+@keyframes steam {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.block:after {
+    filter: blur(2rem);
+}
+
+@media only screen and (max-width: 640px) {
+    body {
+        grid-template-rows: 10vh 20vh 20vh 35vh 5vh 25vh 10vh;
+    }
+    button{
+        grid-row: 6 / 7;
+    }
+}
