@@ -1,6 +1,6 @@
 # meme.j3st3r.xyz
 
-In this repo you find the code for my personal meme page hosted on [meme.j3st3r.xyz](https://meme.j3st3r.xyz) without my [Swetrix Analytics](https://swetrix.com) tracking and without the memes. 
+In this repo you find the deprecated code for my personal meme page which was hosted on [meme.j3st3r.xyz](https://meme.j3st3r.xyz) without my [Swetrix Analytics](https://swetrix.com) tracking and without the memes. 
 
 Other repos/tools/code used:
 * [Trianglify](https://github.com/qrohlf/trianglify)
